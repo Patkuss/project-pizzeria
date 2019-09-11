@@ -3,23 +3,23 @@ import utils from '../utils.js';
 import CartProduct from './CartProduct.js';
 
 class Cart{
-  constructor(element){
+  constructor(cartElem){
     const thisCart = this;
 
     thisCart.products = [];
     thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
 
-    thisCart.getElements(element);
+    thisCart.getElements(cartElem);
     thisCart.initActions();
 
     console.log('new Cart', thisCart);
   }
-  getElements(element){
+  getElements(cartElem){
     const thisCart = this;
 
     thisCart.dom = {};
 
-    thisCart.dom.wrapper = element;
+    thisCart.dom.wrapper = cartElem;
     thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
     thisCart.dom.productList = thisCart.dom.wrapper.querySelector(select.cart.productList);
     thisCart.dom.form = thisCart.dom.wrapper.querySelector(select.cart.form);

@@ -87,8 +87,8 @@ const app = {
   initCart: function(){
     const thisApp = this;
 
-    const cartElem = document.querySelector(select.containerOf.cart);
-    thisApp.cart = new Cart(cartElem);
+    const element = document.querySelector(select.containerOf.cart);
+    thisApp.cart = new Cart(element);
 
     thisApp.productList = document.querySelector(select.containerOf.menu);
 
@@ -100,8 +100,8 @@ const app = {
   initBooking: function(){
     const thisApp = this;
 
-    const bookingElem = document.querySelector(select.containerOf.booking);
-    thisApp.booking = new Booking(bookingElem);
+    const bookingCont = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(bookingCont);
   },
 
   init: function(){

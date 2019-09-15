@@ -1,4 +1,4 @@
-/* global flatpickr */
+/* global flatpickr */ /* eslint-disable no-unused-vars ,no-undef */
 
 import {select, settings} from '../settings.js';
 import utils from '../utils.js';
@@ -9,7 +9,7 @@ class DatePicker extends BaseWidget{
     super(wrapper, utils.dateToStr(new Date()));
     const thisWidget = this;
 
-    thisWidget.dom.input = thisWidget.dom.wrapper.querySelector(select.widgets.datePicker.input);
+    thisWidget.dom.input = thisWidget.dom.wrapper.querySelector(select.datePicker.input);
 
     thisWidget.initPlugin();
   }
@@ -43,6 +43,7 @@ class DatePicker extends BaseWidget{
     return true;
   }
   renderValue(){
+    //console.log()
   }
 }
 

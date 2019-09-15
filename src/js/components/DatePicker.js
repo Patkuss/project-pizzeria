@@ -9,7 +9,7 @@ class DatePicker extends BaseWidget{
     super(wrapper, utils.dateToStr(new Date()));
     const thisWidget = this;
 
-    thisWidget.dom.input = thisWidget.dom.wrapper.querySelector(select.datePicker.input);
+    thisWidget.dom.input = thisWidget.dom.wrapper.querySelector(select.widgets.datePicker.input);
 
     thisWidget.initPlugin();
   }
@@ -36,14 +36,13 @@ class DatePicker extends BaseWidget{
       }
     });
   }
-  parseValue(newDate){
-    return newDate;
+  parseValue(value){
+    return value;
   }
   isValid(){
     return true;
   }
   renderValue(){
-    //console.log()
   }
 }
 

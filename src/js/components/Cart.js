@@ -11,8 +11,6 @@ class Cart{
 
     thisCart.getElements(element);
     thisCart.initActions();
-
-    console.log('new Cart', thisCart);
   }
   getElements(element){
     const thisCart = this;
@@ -55,8 +53,6 @@ class Cart{
     const generatedHTML = templates.cartProduct(menuProduct);
     const generatedDOM = utils.createDOMFromHTML(generatedHTML);
     thisCart.dom.productList.appendChild(generatedDOM);
-
-    console.log('adding product', menuProduct);
 
     thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
     thisCart.update();

@@ -173,6 +173,22 @@
       }
 
     }
+
+    &.busy {
+      cursor: not-allowed;
+      color: lighten($color-dark, 40%);
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: $color-warning;
+        opacity: 0.4;
+      }
+    }
   }
 
   [data-table="1"] {

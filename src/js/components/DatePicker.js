@@ -35,6 +35,10 @@ class DatePicker extends BaseWidget{
         thisWidget.value = dateStr;
       }
     });
+
+    thisWidget.dom.input.addEventListener('input', function(){
+      thisWidget.value = thisWidget.dom.input.value;
+    });
   }
   parseValue(value){
     return value;

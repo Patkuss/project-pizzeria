@@ -1,0 +1,191 @@
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+.home-wrapper {
+  margin: ($base-size * 3.5) auto;
+  padding: ($base-size * 6) ($base-size * 4);
+  background: $color-light;
+  border-bottom: 1px solid lighten($color-dark, 70%);
+  border-radius: $radius;
+}
+
+.orderLink:hover {
+  text-decoration: none;
+}
+
+.bookingLink:hover {
+  text-decoration: none;
+}
+
+.opening-hours {
+  background-color: $color-main;
+  border-radius: $radius;
+  font-size: $font-bold;
+  margin-top: 7px;
+  margin-right: 50px;
+  height: 120px;
+  width: 600px;
+  padding: 35px;
+}
+
+.top-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey-photo {
+  height: 100px;
+  width: 300px;
+  object-fit: cover;
+  flex: 1;
+  overflow: hidden;
+  border-radius: $radius;
+}
+
+.greyscale-card {
+  height: 120px;
+}
+
+.card-body p {
+  color: $color-light;
+  transform: translateY(250%);
+}
+
+.to-interactive > h2 {
+  transform: translateY(60%);
+}
+
+.greyscale-card:hover .card-body .to-interactive > h2 {
+  transform: translateY(-20%);
+  transition: $transition;
+}
+
+.greyscale-card:hover .card-body > p {
+  margin-top: 0;
+  transition: $transition;
+  transform: translateY(-20%);
+}
+
+
+h2, h4 {
+  text-align: center;
+  color: $color-light;
+  font-family: $font-header;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $font-text;
+}
+
+.carousel-section {
+  margin-top: 100px;
+}
+
+.carousel-indicators > li {
+  width: 15px;
+  height: 1px;
+  border-radius: 50%;
+  background: $color-dark;
+}
+
+ol.carousel-indicators li.active {
+  background: $color-dark;
+}
+
+.carousel {
+  padding: 20px;
+}
+
+.comments-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: $radius;
+  object-fit: cover;
+}
+
+.gallery {
+  margin: 100px 0 0 0;
+}
+
+.gallery-photo {
+  width: 192px;
+  height: 192px;
+  border-radius: $radius;
+}
+
+.sheet {
+  position: relative;
+  border-radius: $radius;
+}
+
+.sheet:after {
+  width: 192px;
+  height: 192px;
+  content: "";
+  background: $color-dark;
+  opacity: 0.5;
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0;
+  border-radius: $radius;
+}
+
+.sheet:hover:after{
+  display: block;
+  transition: $transition;
+}
+
+.fas{
+  color: $color-light;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.fas-icon {
+  color: $color-light;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.fas-icon:hover{
+  color: $color-main;
+}
+
+.sheet figcaption{
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.sheet:hover figcaption{
+  display: block;
+  z-index: 2;
+  color: $color-light;
+}
+
+.card {
+  border: none;
+}
+
+.instagram {
+  color: $color-main;
+  text-decoration: underline;
+}

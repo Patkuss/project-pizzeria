@@ -35,6 +35,44 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
+
+    thisApp.homeLink = document.querySelector(select.containerOf.homeLink);
+    thisApp.orderLink = document.querySelector(select.containerOf.orderLink);
+    thisApp.bookingLink = document.querySelector(select.containerOf.bookingLink);
+
+    thisApp.homeLink.addEventListener('click', function(){
+      for (let page of thisApp.pages) {
+        const clickedElement = this;
+        event.preventDefault();
+        const href = clickedElement.getAttribute('href');
+        const pageId = href.replace('#', '');
+        if (page.getAttribute('id') === 'home') {
+          thisApp.activatePage(pageId);
+        }
+      }
+    });
+    thisApp.orderLink.addEventListener('click', function(){
+      for (let page of thisApp.pages) {
+        const clickedElement = this;
+        event.preventDefault();
+        const href = clickedElement.getAttribute('href');
+        const pageId = href.replace('#', '');
+        if (page.getAttribute('id') === 'order') {
+          thisApp.activatePage(pageId);
+        }
+      }
+    });
+    thisApp.bookingLink.addEventListener('click', function(){
+      for (let page of thisApp.pages) {
+        const clickedElement = this;
+        event.preventDefault();
+        const href = clickedElement.getAttribute('href');
+        const pageId = href.replace('#', '');
+        if (page.getAttribute('id') === 'booking') {
+          thisApp.activatePage(pageId);
+        }
+      }
+    });
   },
 
   activatePage: function(pageId){

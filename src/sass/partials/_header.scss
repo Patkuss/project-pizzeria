@@ -32,7 +32,15 @@
     font-weight: $font-light;
     font-style: italic;
   }
+}
 
+.homeLink{
+  color: $color-light;
+}
+
+.homeLink:hover{
+  text-decoration: none;
+  color: $color-main;
 }
 
 .main-nav {

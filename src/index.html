@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -12,19 +13,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <h1 class="logo__title"><span>Mamma</span>Mia!</h1>
+          <a href="#home" class="homeLink">
+          <h1 class="logo__title" ><span>Mamma</span>Mia!</h1>
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
+          </a>
         </div>
-        <div class="main-nav">
-          <a href="#order">Order</a>
-          <a href="#booking">Booking</a>
-        </div>
-        <div id="cart" class="cart">
+        <div id="cart" class="cart homeActive">
           <div class="cart__summary">
             <span class="cart__total-number">0</span>
             <span class="cart__total-price">Total price: $<strong>0</strong></span>
@@ -60,8 +58,124 @@
       </div>
     </div>
   </header>
-
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container">
+        <section class="start">
+          <div class="container">
+            <div class="row top-img">
+              <div class="col-6 card greyscale-card justify-content-center align-items-center text-center">
+                <img src="https://i.imgsafe.org/3a/3a25a3120b.jpeg" alt="image" class="grey-photo">
+                <div class="card-body position-absolute">
+                  <a href="#order" class="orderLink to-interactive"><h2>ORDER ONLINE</h2></a>
+                  <p>Lorem ipsum dolor.</p>
+                </div>
+              </div>
+              <div class="col-6 card greyscale-card justify-content-center align-items-center text-center">
+                <img src="https://i.imgsafe.org/3a/3a2818ff0d.jpeg" alt="image" class="grey-photo">
+                <div class="card-body position-absolute">
+                  <a href="#booking" class="bookingLink to-interactive"><h2>BOOK A TABLE</h2></a>
+                  <p>Lorem ipsum dolor.</p>
+                </div>
+              </div>
+              <div class="col-12 opening-hours">
+                <h2>OPENING HOURS:</h2>
+                <h4>TUE-SUN 12PM - 12AM</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="carousel-section">
+          <div class="row">
+            <div class="col-4">
+              <img src="https://i.imgsafe.org/3a/3a2819350b.jpeg" class="comments-img" alt="image">
+            </div>
+            <div class="col-8">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h6>AMAZING SERVICE!</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>- Margaret Osborne</p>
+                  </div>
+                  <div class="carousel-item">
+                    <h6>AMAZING SERVICE!</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>- Margaret Osborne</p>
+                  </div>
+                  <div class="carousel-item">
+                    <h6>AMAZING SERVICE!</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>- Margaret Osborne</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="gallery">
+          <div class="row">
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a281f010b.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a28212aa2.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a28264178.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a2825addf.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a283985a9.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+            <div class="col-4 card justify-content-center align-items-center text-center">
+              <figure class="sheet"><img src="https://i.imgsafe.org/3a/3a283cb07b.jpeg" alt="image" class="gallery-photo">
+              <figcaption>
+                <i class="fas fa-heart fas-icon"></i><i class="fas fa-share-alt fas-icon"></i>
+              </figcaption>
+              </figure>
+            </div>
+          </div>
+          <br>
+          <p><a href="#" class="instagram">View more on Instagram</a></p>
+        </section>
+      </div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -69,7 +183,6 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
-
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
       <h2 class="page__title no-spacing">Book a table</h2>
@@ -135,7 +248,6 @@
       </form>
     </div>
   </script>
-
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
       <div class="widget-amount"> <!-- widget-amount -->
@@ -163,88 +275,88 @@
       </ul>
     </li>
   </script>
-
   <script id="template-menu-product" type="text/x-handlebars-template">
     <article class="product"> <!-- product -->
-
-        <header class="product__header">
-          <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
-          <p class="product__base-price no-spacing">${{ price }}</p>
-        </header>
-        <div class="product__description"> <!-- description -->
-          <p>{{{ description }}}</p>
-        </div> <!-- .description -->
-        <div class="product__wrapper"> <!-- details -->
-          <form class="product__order">
-            <ul class="product__params"> <!-- params -->
-              {{#each params as |param paramId| }}
-              {{#ifEquals type "checkboxes"}}
-              <li> <!-- checkboxes -->
-                <h3 class="product__params-title">{{{ label }}}</h3>
-                {{#each options}}
-                <div class="checkbox"> <!-- checkbox -->
-                  <label>
-                    <input type="checkbox" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
-                    <span class="checkbox__checkmark"></span>
-                    {{{ label }}} (${{{ price }}})
-                  </label>
-                </div>
-                {{/each}}
-              </li>
-              {{/ifEquals}}
-              {{#ifEquals type "radios"}}
-              <li> <!-- radios -->
-                <h3 class="product__params-title">{{{ label }}}</h3>
-                {{#each options}}
-                <div class="checkbox checkbox--round"> <!-- radio -->
-                  <label>
-                    {{{ label }}} (${{{ price }}})
-                    <input type="radio" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
-                    <span class="checkbox__checkmark"></span>
-                  </label>
-                </div>
-                {{/each}}
-              </li>
-              {{/ifEquals}}
-              {{#ifEquals type "select"}}
-              <li> <!-- select -->
-                <h3 class="product__params-title">{{{ label }}}</h3>
-                <select name="{{ paramId }}">
-                  {{#each options}}
-                  <option value="{{ @key }}" {{#if default}}selected{{/if}}>{{{ label }}} (${{{ price }}})</option>
-                  {{/each}}
-                </select>
-              </li>
-              {{/ifEquals}}
+      <header class="product__header">
+        <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
+        <p class="product__base-price no-spacing">${{ price }}</p>
+      </header>
+      <div class="product__description"> <!-- description -->
+        <p>{{{ description }}}</p>
+      </div> <!-- .description -->
+      <div class="product__wrapper"> <!-- details -->
+        <form class="product__order">
+          <ul class="product__params"> <!-- params -->
+            {{#each params as |param paramId| }}
+            {{#ifEquals type "checkboxes"}}
+            <li> <!-- checkboxes -->
+              <h3 class="product__params-title">{{{ label }}}</h3>
+              {{#each options}}
+              <div class="checkbox"> <!-- checkbox -->
+                <label>
+                  <input type="checkbox" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
+                  <span class="checkbox__checkmark"></span>
+                  {{{ label }}} (${{{ price }}})
+                </label>
+              </div>
               {{/each}}
-            </ul>
-            <div class="amount"> <!-- controls -->
-              <div class="widget-amount"> <!-- widget-amount -->
-                <h3 class="product__params-title">Select quantity</h3>
-                <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
-                <input class="amount" type="text" value="1">
-                <a class="btn-quantity" href="#more"><i class="fas fa-plus"></i></a>
+            </li>
+            {{/ifEquals}}
+            {{#ifEquals type "radios"}}
+            <li> <!-- radios -->
+              <h3 class="product__params-title">{{{ label }}}</h3>
+              {{#each options}}
+              <div class="checkbox checkbox--round"> <!-- radio -->
+                <label>
+                  {{{ label }}} (${{{ price }}})
+                  <input type="radio" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
+                  <span class="checkbox__checkmark"></span>
+                </label>
               </div>
-              <p class="product__total-price">
-                Total: $<span class="price">{{{ price }}}</span>
-              </p>
-              <div> <!-- add-to-cart -->
-                <a class="btn-primary" href="#add-to-cart">Add to cart</a>
-              </div>
-            </div>
-          </form>
-          <div class="product__images {{ class }}"> <!-- images -->
-            {{#each images}}
-            {{{ this }}}
+              {{/each}}
+            </li>
+            {{/ifEquals}}
+            {{#ifEquals type "select"}}
+            <li> <!-- select -->
+              <h3 class="product__params-title">{{{ label }}}</h3>
+              <select name="{{ paramId }}">
+                {{#each options}}
+                <option value="{{ @key }}" {{#if default}}selected{{/if}}>{{{ label }}} (${{{ price }}})</option>
+                {{/each}}
+              </select>
+            </li>
+            {{/ifEquals}}
             {{/each}}
+          </ul>
+          <div class="amount"> <!-- controls -->
+            <div class="widget-amount"> <!-- widget-amount -->
+              <h3 class="product__params-title">Select quantity</h3>
+              <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
+              <input class="amount" type="text" value="1">
+              <a class="btn-quantity" href="#more"><i class="fas fa-plus"></i></a>
+            </div>
+            <p class="product__total-price">
+              Total: $<span class="price">{{{ price }}}</span>
+            </p>
+            <div> <!-- add-to-cart -->
+              <a class="btn-primary" href="#add-to-cart">Add to cart</a>
+            </div>
           </div>
+        </form>
+        <div class="product__images {{ class }}"> <!-- images -->
+          {{#each images}}
+          {{{ this }}}
+          {{/each}}
         </div>
-
+      </div>
     </article> <!-- .product -->
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="vendor/range-slider.min.js" type="module"></script>
+  <script src="vendor/range-slider.min.js"></script>
   <script src="js/app.js" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

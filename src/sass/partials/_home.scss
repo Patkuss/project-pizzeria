@@ -56,10 +56,12 @@
 .card-body p {
   color: $color-light;
   transform: translateY(250%);
+  transition: $transition;
 }
 
 .to-interactive > h2 {
   transform: translateY(60%);
+  transition: $transition;
 }
 
 .greyscale-card:hover .card-body .to-interactive > h2 {
@@ -72,7 +74,6 @@
   transition: $transition;
   transform: translateY(-20%);
 }
-
 
 h2, h4 {
   text-align: center;
@@ -96,8 +97,9 @@ h4 {
 
 .carousel-indicators > li {
   width: 15px;
-  height: 1px;
+  height: 15px;
   border-radius: 50%;
+  border: none;
   background: $color-dark;
 }
 
@@ -130,6 +132,7 @@ ol.carousel-indicators li.active {
 .sheet {
   position: relative;
   border-radius: $radius;
+  transition: $transition;
 }
 
 .sheet:after {
@@ -143,11 +146,11 @@ ol.carousel-indicators li.active {
   left: 0px;
   top: 0;
   border-radius: $radius;
+  transition: $transition;
 }
 
 .sheet:hover:after{
   display: block;
-  transition: $transition;
 }
 
 .fas{
@@ -160,6 +163,7 @@ ol.carousel-indicators li.active {
   color: $color-light;
   font-size: 30px;
   padding: 5px;
+  transition: $transition;
 }
 
 .fas-icon:hover{
@@ -169,16 +173,27 @@ ol.carousel-indicators li.active {
 .sheet figcaption{
   position: absolute;
   display: none;
+  background-color: none;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  transition: $transition;
 }
 
 .sheet:hover figcaption{
   display: block;
   z-index: 2;
   color: $color-light;
+}
+
+.btn-card {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
 }
 
 .card {

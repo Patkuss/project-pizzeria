@@ -78,8 +78,8 @@
       height: ($base-size * 2);
       top: -6px;
       background: $color-dark;
+      z-index: 1;
     }
-
   }
 
   &__fill {
@@ -88,6 +88,38 @@
     transition: width 100ms;
     box-shadow: none;
   }
+}
+
+.table-color {
+  height: 12px;
+  width: 4.16%;
+  margin: 0;
+  padding: 0;
+}
+
+.table-color:first-child {
+  border-radius: 50% 0 0 50%;
+}
+
+.table-color:last-child {
+  border-radius: 0 50% 50% 0;
+}
+
+.availability-green {
+  background: #008d0f;
+}
+
+.availability-orange {
+  background: #ffa600;
+}
+
+.availability-red {
+  background: #ff0000;
+}
+
+.colored-range-slider {
+  position: relative;
+  display: flex;
 }
 
 .flatpickr-day {

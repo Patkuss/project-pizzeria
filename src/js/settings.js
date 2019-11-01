@@ -70,6 +70,7 @@ export const select = {
     starters: '.starters_checkbox',
     phone: '[name="phone"]',
     address: '[name="address"]',
+    coloredRangeSlider: '.colored-range-slider'
   },
   nav: {
     links: '.main-nav a',
@@ -94,6 +95,13 @@ export const classNames = {
   },
   pages: {
     active: 'active',
+  },
+  rangeSlider: {
+    divId: 'availability',
+    div: 'table-color',
+    availabilityGreen: 'availability-green',
+    availabilityOrange: 'availability-orange',
+    availabilityRed: 'availability-red'
   },
 };
 

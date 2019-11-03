@@ -127,6 +127,7 @@ ol.carousel-indicators li.active {
   width: 192px;
   height: 192px;
   border-radius: $radius;
+  object-fit: cover;
 }
 
 .sheet {

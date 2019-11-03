@@ -43,8 +43,10 @@ class Cart{
     });
     thisCart.dom.form.addEventListener('submit', function(event){
       event.preventDefault();
-      thisCart.sendOrder();
-      thisCart.removeCartAfterOrder();
+      if (thisCart.products.length > 0){
+        thisCart.sendOrder();
+        thisCart.removeCartAfterOrder();
+      }
     });
   }
   add(menuProduct){
